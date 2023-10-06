@@ -1,43 +1,22 @@
 class Circle {
-    constructor(radius) {
-      this.radius = radius;
-    }
-  
-    get diameter() {
-      return this.radius * 2;
-    }
-  
-    get area() {
-      return Math.PI * this.radius * this.radius;
-    }
-  
-    set area(value) {
-      this.radius = Math.sqrt(value / Math.PI);
-    }
-  }
-  class circle {
-    constructor(radius) {
-      this.radius = radius;
-    }
-  
-    get diameter() {
-      return this.radius * 2;
-    }
-  
-    get area() {
-      return Math.PI * this.radius * this.radius;
-    }
-  
-    set area(value) {
-      this.radius = Math.sqrt(value / Math.PI);
-    }
-  
-    set circumference(value) {
-      this.radius = value / (2 * Math.PI);
-    }
+  constructor(radius) {
+    this.radius = radius;
   }
 
-const circle = Circle(5);
+  get diameter() {
+    return this.radius * 2;
+  }
+
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  }
+
+  set area(value) {
+    this.radius = Math.sqrt(value / Math.PI);
+  }
+}
+
+const circle = new Circle(5);
 console.log(circle.diameter); // 10
 console.log(circle.circumference); // 31.41592653589793
 console.log(circle.area); // 78.53981633974483
