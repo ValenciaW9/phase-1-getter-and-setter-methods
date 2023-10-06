@@ -15,7 +15,7 @@ class Circle {
       this.radius = Math.sqrt(value / Math.PI);
     }
   }
-  class Circle {
+  class circle {
     constructor(radius) {
       this.radius = radius;
     }
