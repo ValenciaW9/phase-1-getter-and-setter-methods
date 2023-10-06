@@ -1,35 +1,44 @@
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
+const { expect } = require('chai');
+const { Cat, Dog, Bird } = require('./classes.js');
 
-  // Getter method for diameter
-  get diameter() {
-    return this.radius * 2;
-  }
+describe("Cat", () => {
+  let cat;
 
-  // Getter method for circumference
-  get circumference() {
-    return Math.PI * this.diameter;
-  }
+  beforeEach(() => {
+    cat = new Cat("Korat");
+  });
 
-  // Getter method for area
-  get area() {
-    return Math.PI * Math.pow(this.radius, 2);
-  }
+  it("has a breed property", () => {
+    expect(cat.breed).to.equal("Korat");
+  });
 
-  // Setter method for diameter
-  set diameter(newDiameter) {
-    this.radius = newDiameter / 2;
-  }
+  // Add more test cases for the Cat class if needed
+});
 
-  // Setter method for circumference
-  set circumference(newCircumference) {
-    this.radius = newCircumference / (2 * Math.PI);
-  }
+describe("Dog", () => {
+  let dog;
 
-  // Setter method for area
-  set area(newArea) {
-    this.radius = Math.sqrt(newArea / Math.PI);
-  }
-}
+  beforeEach(() => {
+    dog = new Dog("German Shorthaired");
+  });
+
+  it("has a breed property", () => {
+    expect(dog.breed).to.equal("German Shorthaired");
+  });
+
+  // Add more test cases for the Dog class if needed
+});
+
+describe("Bird", () => {
+  let bird;
+
+  beforeEach(() => {
+    bird = new Bird("Rainbow-colored");
+  });
+
+  it("has a color property", () => {
+    expect(bird.color).to.equal("Rainbow-colored");
+  });
+
+  // Add more test cases for the Bird class if needed
+});
