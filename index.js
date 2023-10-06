@@ -4,28 +4,29 @@ class Circle {
   }
 
   get diameter() {
-    return this.radius * 2;
+    // TODO: Calculate and return the diameter
   }
 
   get circumference() {
-    return Math.PI * this.diameter;
+    // TODO: Calculate and return the circumference
   }
 
   get area() {
-    return Math.PI * Math.pow(this.radius, 2);
+    // TODO: Calculate and return the area
   }
 
   set diameter(value) {
-    this.radius = value / 2;
+    // TODO: Calculate the radius based on the diameter value
+    // and set this.radius accordingly
   }
 
   set circumference(value) {
-    this.radius = value / (2 * Math.PI);
+    // TODO: Calculate the radius based on the circumference value
+    // and set this.radius accordingly
   }
 
   set area(value) {
-    this.radius = Math.sqrt(value / Math.PI);
+    // TODO: Calculate the radius based on the area value
+    // and set this.radius accordingly
   }
 }
-
-module.exports = Circle;
