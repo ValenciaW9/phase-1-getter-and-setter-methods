@@ -1,4 +1,4 @@
-require ( './helpers.js' );
+require('./helpers.js');
 
 let circle;
 
@@ -7,10 +7,9 @@ describe( "Circle", () => {
     circle = new Circle( 6 )
   } )
 
-  it( "correctly returns the radius property of a Circle instance using `circle.radius`", () => {
-    expect( circle.radius ).to.equal( 6 )
-  } )
-
+  it("correctly returns the radius property of a Circle instance using `circle.radius`", () => {
+    expect(circle.radius).to.eq(6);
+  });
   describe( "gets", () => {
     it( "the diameter of a circle using the pseudo-property `circle.diameter`", () => {
       expect( circle.diameter ).to.equal( 12 )
@@ -43,5 +42,7 @@ describe( "Circle", () => {
       expect( circle.radius ).to.be.at.most( 8 )
     } )
   } )
-
+  beforeEach(() => {
+    circle = new Circle(6);
+  });
 } )
