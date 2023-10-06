@@ -1,4 +1,4 @@
-class Circle {
+class Calculator {
   constructor(radius) {
     this.radius = radius;
   }
