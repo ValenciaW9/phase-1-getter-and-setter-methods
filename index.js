@@ -29,3 +29,12 @@ class Circle {
     this.radius = Math.sqrt(value / Math.PI);
   }
 }
+const myCircle = new Circle(5);
+console.log(myCircle.diameter); // Output: 10
+console.log(myCircle.circumference); // Output: 31.41592653589793
+console.log(myCircle.area); // Output: 78.53981633974483
+
+myCircle.radius = 7;
+console.log(myCircle.diameter); // Output: 14
+console.log(myCircle.circumference); // Output: 43.982297150257104
+console.log(myCircle.area); // Output: 153.93804002589985
