@@ -37,7 +37,7 @@ class Circle {
     }
   }
 
-const circle = new Circle(5);
+const circle = Circle(5);
 console.log(circle.diameter); // 10
 console.log(circle.circumference); // 31.41592653589793
 console.log(circle.area); // 78.53981633974483
