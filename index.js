@@ -1,44 +1,47 @@
-const { expect } = require('chai');
-const { Cat, Dog, Bird } = require('./classes.js');
+require ( './helpers.js' );
 
-describe("Cat", () => {
-  let cat;
+let circle;
 
-  beforeEach(() => {
-    cat = new Cat("Korat");
-  });
+describe( "Circle", () => {
+  beforeEach( () => {
+    circle = new Circle( 6 )
+  } )
 
-  it("has a breed property", () => {
-    expect(cat.breed).to.equal("Korat");
-  });
+  it( "correctly returns the radius property of a Circle instance using `circle.radius`", () => {
+    expect( circle.radius ).to.equal( 6 )
+  } )
 
-  // Add more test cases for the Cat class if needed
-});
+  describe( "gets", () => {
+    it( "the diameter of a circle using the pseudo-property `circle.diameter`", () => {
+      expect( circle.diameter ).to.equal( 12 )
+    } )
+    it( "the circumference of a circle using the pseudo-property `circle.circumference`", () => {
+      expect( circle.circumference ).to.be.at.least( 37.68 )
+      expect( circle.circumference ).to.be.at.most( 37.71 )
+    } )
+    it( "the area of a circle using the pseudo-property `circle.area`", () => {
+      expect( circle.area ).to.be.at.least( 113 )
+      expect( circle.area ).to.be.at.most( 113.1 )
+    } )
+  } )
 
-describe("Dog", () => {
-  let dog;
+  describe( "sets", () => {
+    it( "the radius using the pseudo-property `circle.diameter`", () => {
+      circle.diameter = 36
+      expect( circle.radius ).to.eq( 18 )
+    } )
 
-  beforeEach(() => {
-    dog = new Dog("German Shorthaired");
-  });
+    it( "the radius using the pseudo-property `circle.circumference`", () => {
+      circle.circumference = 100
+      expect( circle.radius ).to.be.at.least( 15 )
+      expect( circle.radius ).to.be.at.most( 16 )
+    } )
 
-  it("has a breed property", () => {
-    expect(dog.breed).to.equal("German Shorthaired");
-  });
+    it( "the radius using the pseudo-property `circle.area`", () => {
+      circle.area = 200
+      expect( circle.radius ).to.be.at.least( 7 )
+      expect( circle.radius ).to.be.at.most( 8 )
+    } )
+  } )
 
-  // Add more test cases for the Dog class if needed
-});
-
-describe("Bird", () => {
-  let bird;
-
-  beforeEach(() => {
-    bird = new Bird("Rainbow-colored");
-  });
-
-  it("has a color property", () => {
-    expect(bird.color).to.equal("Rainbow-colored");
-  });
-
-  // Add more test cases for the Bird class if needed
-});
+} )
