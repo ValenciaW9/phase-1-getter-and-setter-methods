@@ -1,51 +1,7 @@
-class Calculator {
-  constructor(radius) {
-    this.radius = radius;
-  }
-}
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-
-  get diameter() {
-    return this.radius * 2;
-  }
-
-  get circumference() {
-    return 2 * Math.PI * this.radius;
-  }
-
-  get area() {
-    return Math.PI * Math.pow(this.radius, 2);
-  }
-}
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-
-  get diameter() {
-    return this.radius * 2;
-  }
-
-  set diameter(diameter) {
-    this.radius = diameter / 2;
-  }
-
-  get circumference() {
-    return 2 * Math.PI * this.radius;
-  }
-
-  set circumference(circumference) {
-    this.radius = circumference / (2 * Math.PI);
-  }
-
-  get area() {
-    return Math.PI * Math.pow(this.radius, 2);
-  }
-
-  set area(area) {
-    this.radius = Math.sqrt(area / Math.PI);
-  }
-}
+// Example event listener for a circle calculation button
+const circleButton = document.getElementById('circle-calculate-button');
+circleButton.addEventListener('click', () => {
+  const radius = parseFloat(document.getElementById('circle-radius').value);
+  const result = calculateCircleArea(radius);
+  document.getElementById('circle-result').textContent = `The area of the circle is: ${result}`;
+});
